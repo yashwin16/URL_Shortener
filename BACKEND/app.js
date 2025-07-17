@@ -10,12 +10,12 @@ import user_routes from "./src/routes/user.routes.js";
 import { attachUser } from "./src/utils/attachUser.js";
 import { errorHandler } from "./src/utils/errorHandlers.js";
 
-dotenv.config("./.env")
+dotenv.config()
 
 const app = express();
 
 app.use(cors({
-    origin: 'https://url-shortener-lovat-two.vercel.app/',
+    origin: 'https://url-shortener-lovat-two.vercel.app',
     credentials: true
 }));
 
