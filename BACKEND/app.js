@@ -15,7 +15,7 @@ dotenv.config()
 const app = express();
 
 app.use(cors({
-    origin: 'https://url-shortener-lovat-two.vercel.app',
+    origin: 'https://url-shortener-fq9eiveey-yashwin-sharmas-projects.vercel.app',
     credentials: true
 }));
 
