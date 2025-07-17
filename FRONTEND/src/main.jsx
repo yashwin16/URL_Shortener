@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import './index.css'
 import { routeTree } from './routing/Routetree.js'
-import store from './store/store.js'
+import store from './store/Store.js'
 
 export const queryClient = new QueryClient()
 const router = createRouter({
