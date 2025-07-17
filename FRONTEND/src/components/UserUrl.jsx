@@ -80,12 +80,12 @@ if (!urls.urls || urls.urls.length === 0) {
                 <td className="px-6 py-4">
                   <div className="text-sm">
                     <a
-                      href={`http://localhost:3000/${url.short_url}`}
+                      href={`${import.meta.env.VITE_API_BASE_URL}/${url.short_url}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:text-blue-900 hover:underline"
                     >
-                      {`localhost:3000/${url.short_url}`}
+                      {`${import.meta.env.VITE_API_BASE_URL}/${url.short_url}`}
                     </a>
                   </div>
                 </td>
@@ -98,7 +98,7 @@ if (!urls.urls || urls.urls.length === 0) {
                 </td>
                 <td className="px-6 py-4 text-sm font-medium">
                   <button
-                    onClick={() => handleCopy(`http://localhost:3000/${url.short_url}`, url._id)}
+                    onClick={() => handleCopy(`${import.meta.env.VITE_API_BASE_URL}/${url.short_url}`, url._id)}
                     className={`inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md shadow-sm ${
                       copiedId === url._id
                         ? 'bg-green-600 text-white hover:bg-green-700'
