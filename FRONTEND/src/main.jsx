@@ -3,7 +3,7 @@ import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import './index.css'
-import { routeTree } from './routing/routeTree.js'
+import { routeTree } from './routing/Routetree.js'
 import store from './store/store.js'
 
 export const queryClient = new QueryClient()
