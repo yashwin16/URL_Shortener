@@ -10,7 +10,7 @@ export const createShortUrlWithoutUser = async (url) => {
 
 export const createShortUrlWithUser = async (url,userId,slug=null) => {
     const existing= await getShortUrlbyUserAndfullUrl(userId,url)
-    if(existing) throw new Error("This url already exists")
+    if(existing) return existing.short_url
 
     if(slug){
         const existingSlug = await getCustomShortUrl(slug)
