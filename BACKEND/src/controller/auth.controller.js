@@ -9,8 +9,6 @@ export const register_user = wrapAsync( async (req, res) => {
     req.user = user
     res.cookie("accessToken", token, cookieOptions)
     res.status(200).json({message:"register success"})
-    console.log("Set-Cookie:", res.getHeader("Set-Cookie"));
-
 })
 
 export const login_user = wrapAsync( async (req, res) => {
