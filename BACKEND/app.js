@@ -14,11 +14,21 @@ dotenv.config()
 
 const app = express();
 
-app.use(cors({
-    origin: 'https://url-shortener-fq9eiveey-yashwin-sharmas-projects.vercel.app',
-    credentials: true
-}));
+const allowedOrigins = [
+  'https://url-shortener-fq9eiveey-yashwin-sharmas-projects.vercel.app',
+  'https://url-shortener-lovat-two.vercel.app'
+];
 
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS Not Allowed"));
+    }
+  },
+  credentials: true
+}));
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
