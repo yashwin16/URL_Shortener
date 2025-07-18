@@ -15,7 +15,7 @@ dotenv.config()
 const app = express();
 
 const allowedOrigins = [
-  'https://url-shortener-fq9eiveey-yashwin-sharmas-projects.vercel.app',
+  'https://url-shortener-9342xdjmq-yashwin-sharmas-projects.vercel.app',
   'https://url-shortener-lovat-two.vercel.app'
 ];
 
