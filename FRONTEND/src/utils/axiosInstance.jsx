@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL:" https://url-shortener-1-qbrk.onrender.com",
+    baseURL:"https://url-shortener-1-qbrk.onrender.com",
     timeout:10000, //10s
     withCredentials:true
 })
