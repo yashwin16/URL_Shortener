@@ -6,7 +6,7 @@ export const authMiddleware = async (req, res, next) => {
     if(!token) return res.status(401).json({message:"Unauthorized"})
     try {
         const decoded = verifyToken(token)
-        const user = await findUserById(decoded)
+        const user = await findUserById(decoded.id)
         if(!user) return res.status(401).json({message:"Unauthorized"})
         req.user = user
         next()
